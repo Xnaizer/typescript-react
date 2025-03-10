@@ -39,3 +39,16 @@ users = [
     {name: "John", age: 30},
     {name: "Jane", age: 25}
 ];
+
+
+// Array dengan Type
+
+// let hobbies: string[] = ["Reading", "Gaming", "Coding"];
+// let scores: number[] = [100, 90, 85];
+
+// // hobbies.push(42); // ❌ Error: Type 'number' is not assignable to type 'string'
+
+
+// let user: [string, number] = ["Alice", 25];
+
+// // user = [25, "Alice"]; // ❌ Error: Type 'number' is not assignable to type 'string'

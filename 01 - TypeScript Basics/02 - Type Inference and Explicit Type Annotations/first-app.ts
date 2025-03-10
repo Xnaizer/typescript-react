@@ -45,3 +45,5 @@ userName3 = 'xnaizer';
 // userName3 = 34; // ini akan error karna kita sudah mendefinisikan userName3 menggunakan string, oleh karnanya setelahnya juga akan string.
 
 let userName4: string = 'xnaizer';
+
+

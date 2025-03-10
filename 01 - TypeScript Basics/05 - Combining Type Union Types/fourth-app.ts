@@ -18,3 +18,10 @@ uniqueID = "abc1asdw233sa";
 uniqueID = 122315495603;
 
 // uniqueID = true; // ❌ Error
+
+
+let userId: string | number;
+userId = 123;  // ✅
+userId = "ABC123"; // ✅
+
+// userId = true; // ❌ Error: Type 'boolean' is not assignable to type 'string | number'

@@ -62,3 +62,19 @@ function logMessage(message: string): void {
 }
 
 logMessage("Hello, world!"); // Output: "Hello, world!"
+
+
+// Function dengan Type Annotation
+// function add(a: number, b: number): number {
+//     return a + b;
+//   }
+  
+//   // console.log(add(5, "10")); // ❌ Error: Argument of type 'string' is not assignable to parameter of type 'number'
+  
+
+function greet(name: string = "Guest"): string {
+    return `Hello, ${name}!`;
+  }
+  
+  console.log(greet()); // Output: Hello, Guest!
+  console.log(greet("Alice")); // Output: Hello, Alice!

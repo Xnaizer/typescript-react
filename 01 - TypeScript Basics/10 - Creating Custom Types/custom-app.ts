@@ -130,3 +130,18 @@ users = [
     {name: "John", age: 30},
     {name: "Jane", age: 25}
 ];
+
+
+
+// Object dengan Type
+let person: { 
+    name: string; 
+    age: number; 
+    isEmployed: boolean 
+} = {
+    name: "Bob",
+    age: 30,
+    isEmployed: true,
+};
+  
+  // person.age = "thirty"; // ❌ Error: Type 'string' is not assignable to type 'number'
