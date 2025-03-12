@@ -9,6 +9,11 @@ function App() {
   const [isTypeWrite, setIsTypeWrite] = useState("")
   const [isFormChange, setIsFormChange] = useState({name: "", email:""})
   const [isChecked, setIsChecked] = useState(false)
+  const [isSearchAvail, setIsSearchAvail] = useState("")
+
+
+  const items = ["Apple", "Banana", "Cherry", "Date"];
+  const filteredItems = items.filter((item) => item.toLowerCase().includes(isSearchAvail.toLowerCase()));
 
   return (
     <div className={`min-h-screen ${isDarkMode? "bg-gray-900" : "bg-gray-100"} text-gray-900`}>
@@ -74,19 +79,28 @@ function App() {
           </div>
 
           <div className="p-4 bg-white shadow-md rounded-md">
-            <input className="mr-2" type="checkbox" id="checbox-id-1"  />
-            <label htmlFor="checbox-id-1"> Dicentang </label>
+            <input className="mr-2" type="checkbox" id="checbox-id-1"  onChange={() => setIsChecked(!isChecked)}/>
+            <label htmlFor="checbox-id-1"> {isChecked ? "Go Hide Now!" : "Click Me!"} </label>
+
+          {isChecked ? 
+            <div className="mt-2 p-2">
+            <p className="font-semibold">Whoooshh.. Visible!!</p>
+          </div> : ""
+          }
           </div>
 
           <div className="p-4 bg-white shadow-md rounded-md">
-            <input className="border p-2 w-full" type="text" placeholder="Cari..." />
+            <input className="border p-2 w-full" type="text" placeholder="Cari..." onChange={(e) => setIsSearchAvail(e.target.value)}/>
             <ul className="mt-2">
-              <li className="border-b py-1">Apple</li>
-              <li className="border-b py-1">Banana</li>
-              <li className="border-b py-1">Cherry</li>
-              <li className="border-b py-1">Date</li>
+              {filteredItems.length > 0 ? (
+                filteredItems.map((items, index) => (
+                  <li key={index} className="border py-2 mt-1 pl-2">{items}</li>
+                ))
+              ): "Tidak Ada Hasil"}
             </ul>
           </div>
+
+
         </div>
       </div>
     </div>
