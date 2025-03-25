@@ -1,6 +1,8 @@
 import { useTheme } from "../hooks/useTheme";
 import { useEffect, useState } from "react";
 import  AlquranLogo  from "../assets/alQuran.svg"
+import { Outlet } from "react-router";
+import Footer from "../components/Footer";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -60,6 +62,11 @@ export default function Navbar() {
 
         </div>
       </nav>
+
+      <div className="pt-[5.5rem] font-body">
+        <Outlet />
+        <Footer />
+      </div>
 
     </>
   );
