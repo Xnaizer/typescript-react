@@ -21,7 +21,7 @@ export default function SurahCard({ nomor, nama, namaLatin, jumlahAyat }: SurahC
 
                     
                     <div>
-                        <h1 className="text-lg text-title dark:text-white font-subtitle group-hover:text-title-dark group-hover:dark:text-title">
+                        <h1 className="text-lg text-title dark:text-white font-title group-hover:text-title-dark group-hover:dark:text-title">
                             {namaLatin}
                         </h1>
                         <h2 className="text-sm text-gray-700 dark:text-gray-600 font-title group-hover:text-white group-hover:dark:text-black">

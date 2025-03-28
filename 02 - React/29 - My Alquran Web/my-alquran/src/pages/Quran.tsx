@@ -4,6 +4,7 @@ import axios from "axios";
 import JuzCard from "../components/JuzCard";
 import PageCard from "../components/PageCard";
 // import ThemeCard from "../components/ThemeCard";
+import { useNavigate } from "react-router-dom";
 
 interface Surah {
     status: boolean;
@@ -59,6 +60,7 @@ export default function Quran() {
     const [dataJuz, setDataJuz] = useState<JuzResponse | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [activeTab, setActiveTab] = useState<"surah" | "juz" | "page" | "theme">("surah");
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -121,21 +123,32 @@ export default function Quran() {
                         {activeTab === "surah" && dataSurah && (
                             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full max-w-6xl mx-auto">
                                 {dataSurah.data.map((surah) => (
-                                    <SurahCard
+                                    <li
                                         key={surah.number}
-                                        nomor={surah.number}
-                                        namaLatin={surah.name_id}
-                                        nama={surah.name_short}
-                                        jumlahAyat={surah.number_of_verses}
-                                    />
+                                        onClick={() => navigate(`/surah/${surah.number}`)} 
+                                        className="cursor-pointer"
+                                    >
+                                        <SurahCard
+                                            nomor={surah.number}
+                                            namaLatin={surah.name_id}
+                                            nama={surah.name_short}
+                                            jumlahAyat={surah.number_of_verses}
+                                        />
+                                    </li>
                                 ))}
                             </ul>
                         )}
 
+
                         {activeTab === "juz" && dataJuz && (
                             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full max-w-6xl mx-auto">
                                 {dataJuz.data.map((juz) => (
-                                    <JuzCard
+                                   <li
+                                   key={juz.number}
+                                   onClick={() => navigate(`/juz/${juz.number}`)}
+                                   className="cursor-pointer"
+                                   >
+                                     <JuzCard
                                         key={juz.number}
                                         nomor={juz.number}
                                         nama={juz.name}
@@ -144,6 +157,7 @@ export default function Quran() {
                                         namaEnd={juz.name_end_id}
                                         ayatEnd={juz.verse_end}
                                     />
+                                   </li>
                                 ))}
                             </ul>
                         )}

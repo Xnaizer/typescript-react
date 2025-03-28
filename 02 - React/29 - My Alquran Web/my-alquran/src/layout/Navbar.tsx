@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import  AlquranLogo  from "../assets/alQuran.svg"
 import { Outlet } from "react-router";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   const [isScrolled, setIsScrolled ] = useState(false)
-
+  const navigate = useNavigate();
   useEffect(() => {
     const scrollNavbar = () => {
       if (window.scrollY >= 35){
@@ -41,7 +42,7 @@ export default function Navbar() {
           
           <div className="lg:flex gap-6 hidden">
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Jadwal Sholat</h1>
-            <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Al-Quran</h1>
+            <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title" onClick={() => navigate("/alquran")}>Al-Quran</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Hadits</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Doa</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Asmaul Husna</h1>

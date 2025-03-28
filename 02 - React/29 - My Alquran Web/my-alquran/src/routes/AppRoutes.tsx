@@ -6,6 +6,8 @@ import ErrorPage from "../pages/ErrorPage";
 import Navbar from "../layout/Navbar";
 import Quran from "../pages/Quran";
 import QuranThemes from "../components/QuranThemes";
+import SurahDetail from "../components/SurahDetail";
+import JuzDetail from "../components/JuzDetail";
 
 export const router = createBrowserRouter([
     {
@@ -14,12 +16,20 @@ export const router = createBrowserRouter([
       errorElement: <ErrorPage />, 
       children: [
         {
-          path: "/",
+          path: "/alquran",
           element: <Quran />, 
         },
         {
           path: "/testing",
           element: <QuranThemes />
+        },
+        {
+          path: "surah/:id",
+          element: <SurahDetail />
+        },
+        {
+          path:"/juz",
+          element: <JuzDetail />
         }
 
 
