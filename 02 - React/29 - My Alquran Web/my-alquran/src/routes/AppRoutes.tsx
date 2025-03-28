@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
           element: <SurahDetail />
         },
         {
-          path:"/juz",
+          path:"/juz/:id",
           element: <JuzDetail />
         }
 
