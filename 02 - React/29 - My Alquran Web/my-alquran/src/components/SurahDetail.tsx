@@ -88,7 +88,7 @@ export default function SurahDetail() {
     <>
       <section className="bg-body dark:bg-body-dark max-w-full">
         <div className="bg-body dark:bg-body-dark flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-4 pt-8 gap-4">
-          {/* Tombol Back to Home */}
+          
           <button
             className="px-4 py-2 rounded-lg text-white  bg-text dark:bg-text-dark transition duration-300 hover:bg-opacity-80"
             onClick={() => navigate("/alquran")}
@@ -130,6 +130,7 @@ export default function SurahDetail() {
             <button
               onClick={() => navigate(`/surah/${surahDetail.suratSebelumnya?.nomor}`)}
               className="px-4 md:px-6 py-2 md:py-3 bg-text dark:bg-text-dark rounded-md text-white w-full md:w-auto text-sm md:text-base"
+              
             >
               ← {surahDetail.suratSebelumnya.namaLatin}
             </button>

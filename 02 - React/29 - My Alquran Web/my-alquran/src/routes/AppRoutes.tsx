@@ -5,9 +5,9 @@ import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage";
 import Navbar from "../layout/Navbar";
 import Quran from "../pages/Quran";
-import QuranThemes from "../components/QuranThemes";
 import SurahDetail from "../components/SurahDetail";
 import JuzDetail from "../components/JuzDetail";
+import ThemeDetail from "../components/ThemeDetail";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "/testing",
-          element: <QuranThemes />
+          element:<ThemeDetail />
         },
         {
           path: "surah/:id",
@@ -30,6 +30,10 @@ export const router = createBrowserRouter([
         {
           path:"/juz/:id",
           element: <JuzDetail />
+        },
+        {
+          path:"/tema/:id",
+          element: <ThemeDetail/>
         }
 
 
