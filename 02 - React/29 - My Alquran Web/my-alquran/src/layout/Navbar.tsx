@@ -45,7 +45,7 @@ export default function Navbar() {
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Jadwal Sholat</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title" onClick={() => navigate("/alquran")}>Al-Quran</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Doa</h1>
-            <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Asmaul Husna</h1>
+            <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title" onClick={() => navigate("/asmaul-husna")} >Asmaul Husna</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">About Us</h1>
           </div>
 

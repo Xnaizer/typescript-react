@@ -108,7 +108,7 @@ export default function Quran() {
 
     return (
         <div className="min-h-screen bg-body dark:bg-body-dark p-4 flex flex-col items-center">
-            <h1 className="text-3xl lg:text-5xl font-subtitle text-text dark:text-text-dark pt-8 pb-10 lg:pt-14 lg:pb-16">
+            <h1 className="text-3xl lg:text-5xl font-subtitle text-title dark:text-title-dark pt-8 pb-10 lg:pt-14 lg:pb-16">
                 Read Al-Quran
             </h1>
 

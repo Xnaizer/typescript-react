@@ -8,6 +8,7 @@ import Quran from "../pages/Quran";
 import SurahDetail from "../components/SurahDetail";
 import JuzDetail from "../components/JuzDetail";
 import ThemeDetail from "../components/ThemeDetail";
+import AsmaulHusna from "../pages/AsmaulHusna";
 
 export const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
         {
           path:"/tema/:id",
           element: <ThemeDetail/>
+        },
+        {
+          path: "/asmaul-husna",
+          element: <AsmaulHusna />
         }
 
 
