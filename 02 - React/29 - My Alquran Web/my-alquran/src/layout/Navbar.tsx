@@ -42,9 +42,9 @@ export default function Navbar() {
 
           
           <div className="lg:flex gap-6 hidden">
-            <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Jadwal Sholat</h1>
+            <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title" onClick={() => navigate("/")}>Jadwal Sholat</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title" onClick={() => navigate("/alquran")}>Al-Quran</h1>
-            <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">Doa</h1>
+            <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title"onClick={() => navigate("/doa")}>Doa</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title" onClick={() => navigate("/asmaul-husna")} >Asmaul Husna</h1>
             <h1 className="cursor-pointer hover:text-primary transition hover:text-orange-400 font-title">About Us</h1>
           </div>
