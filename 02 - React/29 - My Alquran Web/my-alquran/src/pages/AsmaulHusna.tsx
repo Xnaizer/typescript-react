@@ -62,7 +62,7 @@ export default function AsmaulHusna () {
         <>
         <section className="min-h-screen bg-body dark:bg-body-dark p-4">
             <div className="">
-                <h1 className="text-3xl md:text-5xl text-center pt-6 pb-16 font-subtitle text-title dark:text-title-dark">Asmaul Husna</h1>
+                <h1 className="text-3xl lg:text-5xl font-subtitle text-title dark:text-title-dark pt-8 pb-10 lg:pt-14 lg:pb-8 text-center">Asmaul Husna</h1>
                 <div className="h-0.5 bg-text dark:bg-text-light w-full max-w-6xl my-4 flex mx-auto mb-10"  />
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full max-w-6xl mx-auto " >
                     {dataMaterial.data.map((item) =>(

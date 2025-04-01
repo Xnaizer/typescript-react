@@ -41,7 +41,7 @@ export default function JuzDetail() {
         const res = await axios.get<JuzDetailData>(
           `https://api.myquran.com/v2/quran/ayat/juz/${currentJuz}`
         );
-        setJuzData(res.data.data); // Data disimpan ke state
+        setJuzData(res.data.data); 
       } catch (error) {
         console.error("Error While Fetching Juz Data", error);
       } finally {
@@ -96,7 +96,7 @@ export default function JuzDetail() {
           
           <button
             className="px-4 py-2 rounded-lg text-white  bg-text dark:bg-text-dark transition duration-300 hover:bg-opacity-80"
-            onClick={() => navigate("/alquran")}
+            onClick={() => navigate("/al-quran")}
           >
             ← Back To Home
           </button>

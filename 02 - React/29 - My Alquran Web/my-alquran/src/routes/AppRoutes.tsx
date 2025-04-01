@@ -9,6 +9,7 @@ import ThemeDetail from "../components/ThemeDetail";
 import AsmaulHusna from "../pages/AsmaulHusna";
 import Doa from "../pages/Doa";
 import Home from "../pages/Home";
+import AboutUs from "../pages/AboutUs";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +22,11 @@ export const router = createBrowserRouter([
           element: <Home />
         },
         {
-          path: "/alquran",
+          path: "jadwalsholat",
+          element: <Home />
+        },
+        {
+          path: "/al-quran",
           element: <Quran />, 
         },
         {
@@ -41,12 +46,20 @@ export const router = createBrowserRouter([
           element: <ThemeDetail/>
         },
         {
-          path: "/asmaul-husna",
+          path: "/asmaulhusna",
           element: <AsmaulHusna />
         },
         {
           path: "/doa",
           element: <Doa />
+        },
+        {
+          path: "/aboutus",
+          element : <AboutUs />
+        },
+        {
+          path: "*",
+          element: <ErrorPage />
         }
 
 

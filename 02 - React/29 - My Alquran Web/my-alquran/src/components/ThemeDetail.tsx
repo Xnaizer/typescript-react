@@ -94,7 +94,7 @@ export default function ThemeDetail() {
         <div className="bg-body dark:bg-body-dark flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-4 pt-8 gap-4 pb-12">
           <button
             className="px-4 py-2 rounded-lg text-white bg-text dark:bg-text-dark transition duration-300 hover:bg-opacity-80"
-            onClick={() => navigate("/alquran")}
+            onClick={() => navigate("/al-quran")}
           >
             ← Back To Home
           </button>
@@ -113,7 +113,7 @@ export default function ThemeDetail() {
         </div>
       </section>
 
-      {/* Menampilkan judul tema */}
+      
       <h1 className="text-center text-xl text-title dark:text-white py-8 bg-body dark:bg-body-dark ">
         {themeInfo?.tema.name || "Tema Tidak Ditemukan"}
       </h1>

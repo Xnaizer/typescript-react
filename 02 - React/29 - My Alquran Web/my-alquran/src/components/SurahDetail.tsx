@@ -91,7 +91,7 @@ export default function SurahDetail() {
           
           <button
             className="px-4 py-2 rounded-lg text-white  bg-text dark:bg-text-dark transition duration-300 hover:bg-opacity-80"
-            onClick={() => navigate("/alquran")}
+            onClick={() => navigate("/al-quran")}
           >
             ← Back To Home
           </button>
