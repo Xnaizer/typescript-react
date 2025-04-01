@@ -28,9 +28,9 @@ export default function AboutUs() {
       
       <div className="max-w-6xl mx-auto flex flex-col items-center space-y-8">
         
-        {/* Contact and APIs Section */}
+        
         <div className="w-full flex flex-col lg:flex-row gap-6 pt-12 justify-between">
-          {/* Contact Section */}
+         
           <div className="rounded-md p-6 text-center w-full max-w-lg">
             <h2 className="text-2xl font-semibold mb-4 text-title dark:text-title-dark">Created By: Xnaizer</h2>
             <div className="flex justify-center space-x-4 text-2xl">
@@ -48,7 +48,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* APIs Section */}
+         
           <div className="rounded-md p-6 w-full max-w-lg">
             <h2 className="text-2xl font-semibold mb-4 text-title dark:text-title-dark">APIs Used</h2>
             <ul className="space-y-4">
@@ -78,12 +78,12 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* Tech Stack Section */}
+        
         <div className="rounded-md p-6 w-full max-w-md">
           <h2 className="text-2xl font-bold mb-4 text-title dark:text-title-dark text-center">Tech Stack Used</h2>
           <div className="h-0.5 bg-text dark:bg-text-light w-full max-w-6xl my-4" />
         
-          <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <ul className="grid grid-cols-2 gap-4">
             {techStack.map((tech) => (
               <li key={tech.name} className="flex flex-col items-center p-3 rounded-lg">
                 <span className="text-lg font-medium text-title dark:text-title-dark">{tech.name}</span>
