@@ -80,7 +80,9 @@ export default function NewGoal({onAddGoal}: NewGoalTipe) {
         const enteredGoal = goal.current!.value;
         const enteredSummary = summary.current!.value;
   
-        onAddGoal(enteredGoal,enteredSummary)
+        onAddGoal(enteredGoal,enteredSummary);
+        
+        event.currentTarget.reset();
     }
 
   return (
