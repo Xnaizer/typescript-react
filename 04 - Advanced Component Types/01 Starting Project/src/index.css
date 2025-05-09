@@ -130,3 +130,42 @@ li button:hover {
   text-align: center;
   color: #acd1ce;
 }
+
+
+.infobox {
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.infobox-hint {
+  background-color: #d0ebff; /* Light blue */
+  color: #084298;
+  border-left: 6px solid #339af0;
+}
+
+.infobox-warning {
+  color: #3a4346;
+  border-left: 6px solid;
+}
+
+.warning--low {
+  background-color: #fff3cd; /* Yellow */
+  border-color: #ffec99;
+}
+
+.warning--medium {
+  background-color: #ffe5b4; /* Orange-ish */
+  border-color: #ffa94d;
+}
+
+.warning--high {
+  background-color: #f8d7da; /* Red */
+  border-color: #f03e3e;
+}
+
+.infobox-warning h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
