@@ -30,7 +30,7 @@ const element = React.createElement("h1", null, "Hello, World!");
 // 3️⃣ JSX vs. JavaScript Murni
 // Tanpa JSX, kita harus menulis kode seperti ini:
 
-
+React.createElement(type, props, ...children)
 const element = React.createElement("h1", null, "Hello, World!");
 
 // ReactDOM.render(element, document.getElementById("root"));
